@@ -1,0 +1,103 @@
+2026-04-02 11:37:39,872 - agent - INFO - vector_store.py:102 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\江苏科技大学学生成绩管理工作细则（江科大校〔2018〕111号）.pdf 内容加载成功
+2026-04-02 11:38:42,916 - agent - INFO - vector_store.py:102 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\江苏科技大学学生成绩管理工作细则（江科大校〔2018〕111号）.pdf 内容加载成功
+2026-04-02 11:45:44,217 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 11:45:44,218 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 你好,你是谁
+2026-04-02 11:46:54,017 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 11:46:54,021 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 你好,你是谁
+2026-04-02 11:48:40,051 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 11:48:40,052 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 你好,你是谁
+2026-04-02 11:48:55,845 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 11:48:55,846 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 请告诉我考试安排
+2026-04-02 11:48:57,493 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：rag_summarize
+2026-04-02 11:48:57,493 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'query': '考试安排'}
+2026-04-02 11:49:01,372 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-04-02 11:49:01,373 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-02 11:49:01,374 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 参考资料中未直接说明考试安排的具体内容，仅涉及成绩管理、考核资格审查及成绩录入时限等规定。例如，任课教师需按时提交成绩，否则可能影响学生参加补考或缓考；课程考核前需审查学生考核资格，如缺交作业达三分之一、实验不及格或旷课达三分之一以上者将被取消考核资格。
+2026-04-02 13:50:19,059 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 13:50:19,060 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 你好,你是谁
+2026-04-02 13:54:16,499 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 13:54:16,499 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 给我生成我的报告
+2026-04-02 13:54:20,060 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fill_context_for_report
+2026-04-02 13:54:20,060 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-02 13:54:20,061 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-02 13:54:20,361 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-02 13:54:20,361 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-02 13:54:23,218 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_user_id
+2026-04-02 13:54:23,218 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-02 13:54:23,219 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-04-02 13:54:23,274 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-02 13:54:23,274 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 1003
+2026-04-02 13:54:25,003 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_current_month
+2026-04-02 13:54:25,003 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-02 13:54:25,004 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-04-02 13:54:25,092 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-02 13:54:25,093 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 2025-10
+2026-04-02 13:54:28,153 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fetch_external_data
+2026-04-02 13:54:28,154 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'user_id': '1003', 'month': '2025-10'}
+2026-04-02 13:54:28,155 - agent - ERROR - middleware.py:33 - 工具fetch_external_data调用失败，原因：'NoneType' object is not subscriptable
+2026-04-02 13:56:01,849 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 13:56:01,849 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | i请生成我的报告
+2026-04-02 13:56:04,926 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_user_id
+2026-04-02 13:56:04,926 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-02 13:56:04,926 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-04-02 13:56:04,982 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-02 13:56:04,982 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 1010
+2026-04-02 13:56:06,370 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_current_month
+2026-04-02 13:56:06,371 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-02 13:56:06,372 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-04-02 13:56:06,460 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-02 13:56:06,461 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 2025-07
+2026-04-02 13:56:07,894 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fill_context_for_report
+2026-04-02 13:56:07,895 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-02 13:56:07,896 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-02 13:56:08,191 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-02 13:56:08,191 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-02 13:56:10,357 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fetch_external_data
+2026-04-02 13:56:10,357 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'user_id': '1010', 'month': '2025-07'}
+2026-04-02 13:56:10,358 - agent - ERROR - middleware.py:33 - 工具fetch_external_data调用失败，原因：'NoneType' object is not subscriptable
+2026-04-02 14:00:50,956 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 14:00:50,957 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 请生成我的报告
+2026-04-02 14:00:56,106 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fill_context_for_report
+2026-04-02 14:00:56,107 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-02 14:00:56,107 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-02 14:00:56,398 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-02 14:00:56,398 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-02 14:00:59,131 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_user_id
+2026-04-02 14:00:59,131 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-02 14:00:59,132 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-04-02 14:00:59,188 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-02 14:00:59,188 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 1001
+2026-04-02 14:01:00,705 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_current_month
+2026-04-02 14:01:00,706 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-02 14:01:00,707 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-04-02 14:01:00,795 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-02 14:01:00,796 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 2025-05
+2026-04-02 14:01:03,867 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fetch_external_data
+2026-04-02 14:01:03,867 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'user_id': '1001', 'month': '2025-05'}
+2026-04-02 14:01:03,872 - agent - INFO - middleware.py:25 - [tool monitor]工具fetch_external_data调用成功
+2026-04-02 14:01:05,235 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有9条消息。
+2026-04-02 14:01:05,236 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | {"特征": "65㎡公寓 | 单身 | 木地板", "效率": "覆盖率:89%\\n日均清扫:49㎡\\n无漏扫区域", "耗材": "主刷寿命:剩余40天\\nHEPA滤网:剩余20%", "对比": "优于80%同面积用户（清洁效率拉满）"}
+2026-04-02 14:01:08,458 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：rag_summarize
+2026-04-02 14:01:08,458 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'query': '扫地机器人耗材更换周期与保养建议'}
+2026-04-02 14:01:15,492 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-04-02 14:01:17,495 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有11条消息。
+2026-04-02 14:01:17,496 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 扫地机器人耗材更换周期与保养建议如下：  
+- 边刷和主刷建议每3-6个月更换一次，若出现明显磨损或清洁效果下降可提前更换；  
+- 滤网建议每月清洗一次，每3-6个月更换一次，若为可水洗滤网，需晾干后再装回；  
+- 电池寿命通常为1-2年，若续航明显缩短可考虑更换；  
+- 定期清理滚刷缠绕的毛发、检查尘盒密封性，并保持传感器清洁，有助于延长整机使用寿命。
+2026-04-02 14:39:55,363 - agent - INFO - vector_store.py:99 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\华为 WS7206 WiFi AX3 Pro 路由器用户手册.pdf 内容加载成功
+2026-04-02 14:43:37,181 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 14:43:37,182 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 路由器无法连接网络怎么办
+2026-04-02 14:43:39,426 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：rag_summarize
+2026-04-02 14:43:39,427 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'query': '路由器无法连接网络 故障排除'}
+2026-04-02 14:43:45,495 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-04-02 14:43:46,929 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-02 14:43:46,929 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 检查路由器WAN端口是否正确连接至调制解调器，并确认调制解调器工作正常且已连网；重启调制解调器和路由器，等待几分钟使其重新连接；观察路由器LED指示灯，若为红色则表示网络连接异常；可尝试重启路由器或重置为出厂设置；确保设备Wi-Fi功能已启用且输入的密码正确。
+2026-04-02 15:16:03,617 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 15:16:03,617 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 路由器无法连接网络怎么办
+2026-04-02 15:16:05,272 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：rag_summarize
+2026-04-02 15:16:05,273 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'query': '路由器无法连接网络 故障排除'}
+2026-04-02 15:16:09,543 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-04-02 15:16:10,668 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-02 15:16:10,669 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 检查路由器WAN端口是否正确连接到调制解调器，并确认调制解调器工作正常且已联网；重启调制解调器和路由器，等待几分钟重新连接；查看路由器LED指示灯，若为红色则表示网络连接异常；可尝试将路由器重置为出厂设置。

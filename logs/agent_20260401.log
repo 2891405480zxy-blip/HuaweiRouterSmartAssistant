@@ -1,0 +1,195 @@
+2026-04-01 12:14:31,840 - agent - ERROR - vector_store.py:100 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "C:\Users\zhangxinyu\PycharmProjects\PythonProject10\.venv\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zhangxinyu\PycharmProjects\PythonProject10\rag\vector_store.py", line 79, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\zhangxinyu\PycharmProjects\PythonProject10\rag\vector_store.py", line 60, in get_file_documents
+    return pdf_loader(read_path)
+  File "C:\Users\zhangxinyu\PycharmProjects\PythonProject10\utils\file_handler.py", line 41, in pdf_loader
+    return PyPDFLoader(filepath,passwd).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\zhangxinyu\PycharmProjects\PythonProject10\.venv\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\zhangxinyu\PycharmProjects\PythonProject10\.venv\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "C:\Users\zhangxinyu\PycharmProjects\PythonProject10\.venv\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+        "`pypdf` package not found, please install it with `pip install pypdf`"
+    )
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-04-01 12:14:37,918 - agent - INFO - vector_store.py:97 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\扫地机器人100问2.txt 内容加载成功
+2026-04-01 12:14:44,177 - agent - INFO - vector_store.py:97 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\扫拖一体机器人100问.txt 内容加载成功
+2026-04-01 12:14:59,315 - agent - INFO - vector_store.py:97 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\扫地机器人100问.pdf 内容加载成功
+2026-04-01 12:14:59,324 - agent - INFO - vector_store.py:75 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-04-01 12:14:59,325 - agent - INFO - vector_store.py:75 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-04-01 12:15:09,126 - agent - INFO - vector_store.py:97 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\故障排除.txt 内容加载成功
+2026-04-01 12:15:13,635 - agent - INFO - vector_store.py:97 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\维护保养.txt 内容加载成功
+2026-04-01 12:15:18,992 - agent - INFO - vector_store.py:97 - [加载知识库]C:\Users\zhangxinyu\PycharmProjects\PythonProject10\data\选购指南.txt 内容加载成功
+2026-04-01 21:01:01,029 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-01 21:01:01,030 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-04-01 21:01:03,851 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fill_context_for_report
+2026-04-01 21:01:03,852 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:01:03,852 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-01 21:01:03,853 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-01 21:01:03,853 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-01 21:01:05,796 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_user_id
+2026-04-01 21:01:05,796 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:01:05,797 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-04-01 21:01:05,798 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-01 21:01:05,798 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 1009
+2026-04-01 21:01:07,013 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_current_month
+2026-04-01 21:01:07,013 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:01:07,014 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-04-01 21:01:07,016 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-01 21:01:07,016 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 2025-05
+2026-04-01 21:01:09,601 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fetch_external_data
+2026-04-01 21:01:09,601 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'user_id': '1009', 'month': '2025-05'}
+2026-04-01 21:01:09,605 - agent - ERROR - middleware.py:33 - 工具fetch_external_data调用失败，原因：list index out of range
+2026-04-01 21:12:32,399 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-01 21:12:32,399 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-04-01 21:12:34,809 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_user_id
+2026-04-01 21:12:34,810 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:12:34,810 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-04-01 21:12:34,811 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-01 21:12:34,811 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 1005
+2026-04-01 21:12:37,213 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_current_month
+2026-04-01 21:12:37,213 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:12:37,214 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-04-01 21:12:37,215 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-01 21:12:37,215 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 2025-07
+2026-04-01 21:12:39,804 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fill_context_for_report
+2026-04-01 21:12:39,805 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:12:39,805 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-01 21:12:39,806 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-01 21:12:39,806 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-01 21:12:44,017 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fetch_external_data
+2026-04-01 21:12:44,018 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'user_id': '1005', 'month': '2025-07'}
+2026-04-01 21:12:44,018 - agent - ERROR - middleware.py:33 - 工具fetch_external_data调用失败，原因：name 'external_data' is not defined
+2026-04-01 21:17:37,625 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-01 21:17:37,625 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-04-01 21:17:40,212 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_user_id
+2026-04-01 21:17:40,212 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:17:40,213 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-04-01 21:17:40,214 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-01 21:17:40,214 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 1007
+2026-04-01 21:17:44,413 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_current_month
+2026-04-01 21:17:44,414 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:17:44,415 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-04-01 21:17:44,416 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-01 21:17:44,416 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 2025-03
+2026-04-01 21:17:46,464 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fill_context_for_report
+2026-04-01 21:17:46,464 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:17:46,465 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-01 21:17:46,465 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-01 21:17:46,465 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-01 21:17:49,757 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fetch_external_data
+2026-04-01 21:17:49,758 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'user_id': '1007', 'month': '2025-03'}
+2026-04-01 21:17:49,759 - agent - ERROR - middleware.py:33 - 工具fetch_external_data调用失败，原因：list index out of range
+2026-04-01 21:19:27,749 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-01 21:19:27,749 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-04-01 21:19:30,233 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_user_id
+2026-04-01 21:19:30,234 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:19:30,235 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-04-01 21:19:30,236 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-01 21:19:30,236 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 1009
+2026-04-01 21:19:31,755 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_current_month
+2026-04-01 21:19:31,755 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:19:31,755 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-04-01 21:19:31,756 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-01 21:19:31,756 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 2025-03
+2026-04-01 21:19:33,872 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fill_context_for_report
+2026-04-01 21:19:33,872 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:19:33,873 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-01 21:19:33,873 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-01 21:19:33,873 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-01 21:19:36,722 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fetch_external_data
+2026-04-01 21:19:36,722 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'user_id': '1009', 'month': '2025-03'}
+2026-04-01 21:19:36,724 - agent - ERROR - middleware.py:33 - 工具fetch_external_data调用失败，原因：list index out of range
+2026-04-01 21:23:03,208 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-01 21:23:03,208 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-04-01 21:23:05,919 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_user_id
+2026-04-01 21:23:05,920 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:23:05,920 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-04-01 21:23:05,921 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-01 21:23:05,921 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 1009
+2026-04-01 21:23:07,886 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_current_month
+2026-04-01 21:23:07,886 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:23:07,887 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-04-01 21:23:07,887 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-01 21:23:07,887 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 2025-04
+2026-04-01 21:23:09,935 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fill_context_for_report
+2026-04-01 21:23:09,935 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 21:23:09,936 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-01 21:23:09,937 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-01 21:23:09,937 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-01 21:23:12,647 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fetch_external_data
+2026-04-01 21:23:12,647 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'user_id': '1009', 'month': '2025-04'}
+2026-04-01 21:23:12,650 - agent - INFO - middleware.py:25 - [tool monitor]工具fetch_external_data调用成功
+2026-04-01 21:23:12,651 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有9条消息。
+2026-04-01 21:23:12,651 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | {"特征": "80㎡两居 | 养宠 | 仿实木", "效率": "宠物毛发清理:90%\\n自动回充成功率:95%", "耗材": "胶刷缠绕:轻度\\n滤网寿命:剩余50天", "对比": "养宠家庭中清洁效率前20%"}
+2026-04-01 21:23:15,284 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：rag_summarize
+2026-04-01 21:23:15,284 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'query': '养宠家庭扫地机器人保养建议'}
+2026-04-01 21:23:20,331 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-04-01 21:23:20,331 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有11条消息。
+2026-04-01 21:23:20,332 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 养宠家庭使用扫地机器人后，应每日全面清理主刷、尘盒和拖布；每周进行除味消毒，并将耗材更换周期缩短50%。若机器人接触宠物粪便，需立即用湿巾清理并用中性洗涤剂擦拭。同时，每次使用后清理防撞条缝隙的毛发，检查边刷是否卡顿，防止电机损坏。
+2026-04-01 21:23:22,048 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：rag_summarize
+2026-04-01 21:23:22,049 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'query': '仿实木地板清洁注意事项'}
+2026-04-01 21:23:27,554 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-04-01 21:23:27,556 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有13条消息。
+2026-04-01 21:23:27,556 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 仿实木地板清洁时应调至低档出水量或使用干拖模式，避免地面积水；每周对机器人轮组除尘，防止泥沙磨损地板；可关闭门窗减少灰尘进入，并适当降低清扫频次。
+2026-04-01 22:08:04,387 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-01 22:08:04,387 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 在我当前所在位置的天气下,机器人如何保养
+2026-04-01 22:08:07,298 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_user_location
+2026-04-01 22:08:07,298 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 22:08:07,299 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_location调用成功
+2026-04-01 22:08:07,332 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-01 22:08:07,333 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 深圳
+2026-04-01 22:08:10,867 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_weather
+2026-04-01 22:08:10,867 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'city': '深圳'}
+2026-04-01 22:08:10,868 - agent - INFO - middleware.py:25 - [tool monitor]工具get_weather调用成功
+2026-04-01 22:08:11,403 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-01 22:08:11,404 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 城市深圳天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-04-01 22:08:15,495 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：rag_summarize
+2026-04-01 22:08:15,495 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'query': '扫地机器人在晴天26度50%湿度环境下的保养方法'}
+2026-04-01 22:08:19,323 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-04-01 22:08:20,456 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-01 22:08:20,456 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 在晴天26度、50%湿度环境下，扫地机器人使用后应及时用干软布擦拭机身外壳，去除灰尘和水渍；每次清扫完成后清理防撞条缝隙中的毛发和线头，防止卡顿。该环境未在参考资料中被特别归类，因此按通用基础维护执行即可。
+2026-04-01 22:12:53,628 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-01 22:12:53,628 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage | 帮我生成我的使用报告
+2026-04-01 22:12:57,252 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_user_id
+2026-04-01 22:12:57,252 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 22:12:57,253 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-04-01 22:12:57,309 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-01 22:12:57,310 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 1006
+2026-04-01 22:12:59,411 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：get_current_month
+2026-04-01 22:12:59,411 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 22:12:59,412 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-04-01 22:12:59,502 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-01 22:12:59,503 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 2025-11
+2026-04-01 22:13:03,607 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fill_context_for_report
+2026-04-01 22:13:03,607 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{}
+2026-04-01 22:13:03,608 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-01 22:13:03,904 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-01 22:13:03,905 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-01 22:13:06,963 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：fetch_external_data
+2026-04-01 22:13:06,963 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'user_id': '1006', 'month': '2025-11'}
+2026-04-01 22:13:06,964 - agent - INFO - middleware.py:25 - [tool monitor]工具fetch_external_data调用成功
+2026-04-01 22:13:08,272 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有9条消息。
+2026-04-01 22:13:08,272 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | {"特征": "150㎡别墅 | 儿童 | 多层", "效率": "跨楼层失败:0次/周\\n玩具避障率:88%", "耗材": "边刷寿命:剩余50天\\n集尘袋消耗:0.8个/月", "对比": "清洁效率优于85%大户型多层用户"}
+2026-04-01 22:13:12,148 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：rag_summarize
+2026-04-01 22:13:12,149 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'query': '多层别墅扫地机器人使用建议和保养方法'}
+2026-04-01 22:13:17,484 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-04-01 22:13:19,431 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有11条消息。
+2026-04-01 22:13:19,431 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 多层别墅使用扫地机器人时，应为每层楼单独建图，更换楼层前清理机器人底部和传感器，并校准扫拖参数。日常保养包括：每次使用后清理尘盒、主刷、拖布及轮组泥沙；每日用干软布擦拭机身外壳；及时清除防撞条缝隙中的毛发线头；每周清洁底部和避障传感器，防止灰尘遮挡或反光干扰建图；长期存放或环境特殊（如宠物家庭、阳台封闭、低矮家具）时，需加强清洁、通风或缩短耗材更换周期。
+2026-04-01 22:13:21,328 - agent - INFO - middleware.py:20 - [tool monitor]执行工具：rag_summarize
+2026-04-01 22:13:21,329 - agent - INFO - middleware.py:21 - [tool monitor]传入参数：{'query': '边刷和集尘袋更换周期及判断方法'}
+2026-04-01 22:13:25,762 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-04-01 22:13:26,743 - agent - INFO - middleware.py:42 - [log_before_model]即将调用模型，带有13条消息。
+2026-04-01 22:13:26,743 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage | 边刷一般每2-3个月更换一次，多尘环境建议每月更换；当刷毛磨损至小于1cm、出现变形或断裂时应立即更换。集尘袋在普通家庭中每1-2个月更换一次，宠物家庭建议每半个月至1个月更换。

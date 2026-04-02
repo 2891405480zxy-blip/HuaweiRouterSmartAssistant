@@ -8,7 +8,7 @@
 
 ## 项目截图
 
-![项目截图](img.png)
+![项目截图](img_1.png)
 
 ---
 
@@ -32,27 +32,21 @@
 ---
 
 ## 项目结构
-
-├── agent/ # Agent 核心
-│ ├── tools/ # 工具定义与中间件
-│ └── react_agent.py # ReAct Agent 主体
-├── rag/ # RAG 核心
-│ ├── rag_service.py # RAG 服务
-│ └── vector_store.py # 向量存储与混合检索
-├── model/ # 模型工厂
-├── prompts/ # 提示词管理
-├── config/ # yml 配置文件
-├── utils/ # 工具函数
-├── data/ # 知识库文档
-└── app.py # Streamlit 网页入口
-
-
----
-
-## 快速启动
-
-1. **安装依赖**
-```bash
+```text
+agent/               # Agent 核心
+    tools/           # 工具定义与中间件
+    react_agent.py   # ReAct Agent 主体
+rag/                 # RAG 核心
+    rag_service.py   # RAG 服务
+    vector_store.py  # 向量存储与混合检索
+model/               # 模型工厂
+prompts/             # 提示词管理
+config/              # yml 配置文件
+utils/               # 工具函数
+data/                # 知识库文档
+app.py               # Streamlit 网页入口
+快速启动
+安装依赖
 pip install -r requirements.txt
 配置 API Key
 在 config/rag.yml 中填入阿里云百炼的 API Key。
